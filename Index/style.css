@@ -1,0 +1,238 @@
+/* some base styles that will be applied to every button */
+button {
+	font-size: 30px;
+	padding: 10px 30px;
+	margin: 10px;
+	border: 0;
+	cursor: pointer;
+	color: black;
+	text-transform: lowercase;
+	border-radius: 10px;
+	display: inline-block;
+	overflow: hidden;
+	transition: all 0.4s cubic-bezier(.86, .01, .15, .99);
+}
+
+button::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0;
+}
+
+/* every gradient button will translate upwards on hover */
+
+button.gradient:hover {
+	color: white;
+	box-shadow: 0 5px 35px rgba(0, 0, 0, 0.6);
+	transform: translateY(-5px);
+}
+
+
+/************************************
+GRADIENT BUTTONS 
+
+
+Button One 
+
+*/
+
+.button-one {
+	background-color: #f9ff00;
+	transform: translateY(0);
+}
+
+.button-one::before {
+	background: linear-gradient(to right, #f9ff00, #00ff00);
+	-webkit-transform: scaleY(0);
+	transform: scaleX(0);
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 100% 0%;
+	transition: 0.4s cubic-bezier(.86, .01, .15, .99);
+}
+
+.button-one:hover::before {
+	transform: scaleX(1.1) scaleY(1.1);
+}
+
+.button-one:hover {
+	color: #333;
+}
+
+
+/* Button Two */
+
+.button-two {
+	background: #efcfff;
+	transform: perspective(1px) translateZ(0);
+	transition: 0.4s cubic-bezier(.86, .01, .15, .99);
+}
+
+.button-two:before {
+	background: linear-gradient(to right, #efcfff, #af6fff, #efcfff);
+	transform: scaleX(0);
+	opacity: 0;
+	transform-origin: 50% 50%;
+	transition: 0.4s cubic-bezier(.86, .01, .15, .99);
+}
+
+.button-two:hover:before {
+	transform: scaleX(1) scaleY(1);
+	opacity: 1;
+}
+
+
+/*Button THree*/
+
+.button-three {
+	-webkit-transform: perspective(1px) translateZ(0);
+	background: #08aa61;
+	transform: perspective(1px) translateZ(0);
+	position: relative;
+	transition-timing-function: cubic-bezier(.86, .01, .15, .99);
+	transition-duration: 0.4ss;
+}
+
+.button-three:before {
+	background: linear-gradient(to bottom, #88daa1, #08aa61);
+	transform: scaleY(0);
+	transform-origin: 0% 0%;
+	transition: 0.4s cubic-bezier(.86, .01, .15, .99);
+}
+
+.button-three:hover:before {
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
+}
+
+
+/****************
+CLIP-PATH EFFECTS
+
+Button Four*/
+
+.button-four {
+	background: #fff;
+	transform: perspective(1px) translateZ(0);
+	color: black;
+	transition: 0.4s;
+}
+
+.button-four::before {
+	background: rgb(255, 90, 20);
+	clip-path: inset(0 100% 0 0);
+	opacity: 1;
+	transition: 0.4s;
+}
+
+.button-four:hover::before {
+	clip-path: inset(0 0 0 0);
+}
+
+.button-four:hover {
+	color: white;
+	box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
+}
+
+
+/*Button Five*/
+
+.button-five {
+	background: white;
+	color: black;
+	transform: perspective(1px) translateZ(0);
+	transition: 0.4s;
+}
+
+.button-five::before {
+	background: rgb(20, 120, 255);
+	clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
+	opacity: 1;
+	transition: 0.4s;
+}
+
+.button-five:hover::before {
+	clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
+}
+
+.button-five:hover {
+	color: white;
+	box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
+}
+
+
+/*Button Six*/
+
+.button-six {
+	background: white;
+	color: black;
+	transition: 0.4s;
+	transform: perspective(1px) translateZ(0);
+}
+
+.button-six:hover {
+	color: white;
+	box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
+}
+
+.button-six::before {
+	clip-path: circle(0.5% at 50% 50%);
+	background: #9900cc;
+	transition: 0.4s;
+	opacity: 1;
+}
+
+.button-six:hover::before {
+	clip-path: circle(100% at 50% 50%);
+}
+
+
+/* just some extra styles */
+
+* {
+	margin: 0;
+	color: white;
+}
+
+body {
+	background: #222232;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	font-family: -apple-system, system-ui, sans-serif;
+}
+
+div.container {
+	padding: 20px;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.1)
+}
+
+.container {
+	text-align: center;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+p {
+	font-size: 25px;
+	font-style: italic;
+	border-radius: 20px;
+	margin-bottom: 20px;
+}
+
+hr {
+	border: 0;
+	background: rgba(255, 255, 255, 0.2);
+	margin: 10px;
+	height: 1px;
+}

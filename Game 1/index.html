@@ -1,0 +1,142 @@
+<!-- 
+    Game: Shinobi Rush
+    Author: Hirusha Dayarathna
+    Description: Shinobi Rush is a thrilling 2D platformer where players navigate a nimble ninja through challenging obstacle courses. Use the space key to jump and the enter key to start. Enjoy the adventure!
+    Version: 1.0
+    Date: 2023-09-01
+    Github: https://github.com/geekhirushadev
+    Mail: geekhirusha@gmail.com
+    Phone: +94726733332
+    Website: https://geekhirushadev.github.io/Shinobi-Rush
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stating... Shinobi Rush</title>
+    <link rel="stylesheet" href="mstyle.css">
+
+</head>
+
+<body>
+
+    <form>
+
+        <input class="logic-checkbox" type="checkbox" id="toggleGame" />
+        <input class="logic-checkbox" type="checkbox" id="HowToPlayPopup" />
+        <input class="logic-checkbox" type="checkbox" id="whoAmIPopup" />
+
+        <section class="game-menu-frame">
+            <header class="game-header">
+
+                <h1 class="game-title">
+                    <div class="line-1">Shinobi</div>
+                    <div class="line-2">Rush</div>
+                    <div class="line-3">Let's play Level No 01</div>
+                </h1>
+
+            </header>
+
+            <nav class="game-nav">
+                <h2 class="game-nav-title">Main Menu</h2>
+
+                <ul class="game-nav-list">
+                    <a href="game1.html">
+                        <li class="game-nav-item">
+                            <label class="game-nav-button" onclick="open();" for="toggleGame" tabindex="0">Start
+                                Game</label>
+                        </li>
+                    </a>
+                    <li class="game-nav-item">
+                        <label class="game-nav-button" for="HowToPlayPopup" tabindex="0">How to Play</label>
+                    </li>
+                    <li class="game-nav-item">
+                        <label class="game-nav-button" for="whoAmIPopup" tabindex="0">Who Am I</label>
+                    </li>
+                    <li class="game-nav-item"> <a class="game-nav-button"
+                            href="https://geekhirusha.orgfree.com/">Quit</a></li>
+                </ul>
+
+                <p class="note">Developed By ❤ GeekHirusha Dev</p>
+            </nav>
+
+        </section>
+
+
+        <section class="popup common-content" id="whoAmI">
+            <label class="close-button" for="whoAmIPopup" tabindex="0">x</label>
+            <h3 class="common-title">Who Am I ?</h3>
+            <p>I'm Hirusha Dayaratne, a student studying JavaScript, CSS and HTML design.</p>
+            <p>You can see more on my website <a href="https://www.geekhirusha.orgfree.com/"
+                    target="_blank">geekhirusha.orgfree.com</a> and follow me on <a
+                    href="https://www.youtube.com/GeekHirusha" target="_blank">YouTube</a>.</p><img
+                src="540X652.png?fit=crop&amp;format=auto&amp;height=200&amp;version=1636190215&amp;width=200"
+                alt="Hirusha Dayarathna" />
+            <label class="game-nav-button" for="whoAmIPopup" tabindex="0">Close</label>
+        </section>
+
+
+        <section class="popup common-content" id="HowToPlay">
+            <label class="close-button" for="HowToPlayPopup" tabindex="0">x</label>
+
+            <h3 class="common-title">How to Play ?</h3>
+
+            <p>
+                <b>☞ Use space key to ninja jump.</b>
+                <br>
+                <b>☞ Use Enter key to start the game.</b>
+            </p>
+
+            <img src="map.png?fit=crop&amp;format=auto&amp;height=200&amp;version=1636190215&amp;width=200"
+                alt="Hirusha Dayarathna" />
+
+            <br>
+
+            <p>)⁠☞ Pay attention to the speed of your character: As you run, your character may speed up. Make
+                sure to adjust your movements accordingly, especially when it comes to jumping over obstacles.
+
+                <br><br>
+
+                )⁠☞ Learn the basic jump mechanic: In most run and jump games, the height of your character's
+                jump is determined by how long you hold down the jump button. Experiment with different jump timings to
+                see what works best for each obstacle.
+
+                <br><br>
+
+                )⁠☞ Look ahead to plan your movements: Scan the level ahead for any upcoming obstacles or
+                hazards. This way, you can anticipate when and where to jump.
+
+                <br><br>
+
+                )⁠☞ Practice your timing: As you progress through the levels, the timing required for jumping
+                will become more challenging. Continuously practice your jumps to improve your timing and accuracy,
+                which will help you overcome even the most difficult obstacles.
+
+                <br><br>
+
+                )⁠☞ Be patient and persistent: Remember that run and jump games can be difficult, no matter how
+                simple the mechanics are. Don't get discouraged if you can't beat a level on your first try. Try
+                practicing the jumps, fine-tuning your timing, and keeping a calm mindset. Eventually, you will get
+                through it.
+            </p>
+            <label class="game-nav-button" for="HowToPlayPopup" tabindex="0">Close</label>
+        </section>
+
+
+    </form>
+    <script src="mscript.js"></script>
+
+</body>
+
+ 
+<!-- 
+  
+  Copyright (c) 2023 GH Game Studio
+Permission is hereby granted, free of charge, to any person obtaining a copy of this game and associated documentation files (the "Shinobi Rush"), to deal in the game without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the game, and to permit persons to whom the game
+is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the game.
+THE GAME IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE GAME OR THE USE OR OTHER DEALINGS IN THE GAME.  -->
+
+</html>

@@ -1,0 +1,93 @@
+<!-- 
+    Game: Shinobi Rush
+    Author: Hirusha Dayarathna
+    Description: Shinobi Rush is a thrilling 2D platformer where players navigate a nimble ninja through challenging obstacle courses. Use the space key to jump and the enter key to start. Enjoy the adventure!
+    Version: 1.0
+    Date: 2023-09-01
+    Github: https://github.com/geekhirushadev
+    Mail: geekhirusha@gmail.com
+    Phone: +94726733332
+    Website: https://geekhirushadev.github.io/Shinobi-Rush
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Game Levels</title>
+  <link rel="stylesheet" href="Level/style.css" />
+</head>
+
+<body class="body" id="body">
+
+  <main class="app">
+
+    <div class="boxes">
+
+      <div class="container">
+        <br><br><br><br>
+        <b id="user8">Guest</b>
+        <p>Select The Game You Like</p>
+        <br><br><br><br><br>
+        <div class="grid image-grid">
+
+          <div class="grid-block">
+            <div class="tile">
+              <a class="tile-link" href="Game 1/index.html">
+                <img class="tile-img tile-img1" src="Game 1/background1.png" alt="Image">
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-block">
+            <div class="tile">
+              <a class="tile-link" href="Game 1/Game 2/index.html">
+                <img class="tile-img tile-img2" src="Game 1/background2.png" alt="Image">
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-block">
+            <div class="tile">
+              <a class="tile-link" href="Game 1/Game 2/Game 3/index.html">
+                <img class="tile-img tile-img3" src="Game 1/background3.png" alt="Image">
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+    </div>
+
+  </main>
+
+
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      let username = localStorage.getItem("username");
+      if (username) {
+        document.getElementById("user8").innerText = username;
+      }
+    });
+  </script>
+  <script src="Level/script.js"></script>
+</body>
+
+ 
+<!-- 
+  
+  Copyright (c) 2023 GH Game Studio
+Permission is hereby granted, free of charge, to any person obtaining a copy of this game and associated documentation files (the "Shinobi Rush"), to deal in the game without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the game, and to permit persons to whom the game
+is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the game.
+THE GAME IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE GAME OR THE USE OR OTHER DEALINGS IN THE GAME.  -->
+
+</html>

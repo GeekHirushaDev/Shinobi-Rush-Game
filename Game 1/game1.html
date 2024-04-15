@@ -1,0 +1,102 @@
+<!-- 
+    Game: Shinobi Rush
+    Author: Hirusha Dayarathna
+    Description: Shinobi Rush is a thrilling 2D platformer where players navigate a nimble ninja through challenging obstacle courses. Use the space key to jump and the enter key to start. Enjoy the adventure!
+    Version: 1.0
+    Date: 2023-09-01
+    Github: https://github.com/geekhirushadev
+    Mail: geekhirusha@gmail.com
+    Phone: +94726733332
+    Website: https://geekhirushadev.github.io/Shinobi-Rush
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shinobi Rush | Level 01</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="body" id="body" onkeypress="bg();" onload="start();" onkeyup="keyCheck(event);">
+
+    <div class="background" id="background">
+        <div>
+            <img class="profile" id="profile" src="profile.png" />
+            <div class="box">
+                <b class="name" id="name">Guest</b>
+            </div>
+
+        </div>
+
+        <div id="page-wrapper">
+            <p class="styled">
+                <progress id="meter" value="0" max="1000"></progress>
+            </p>
+        </div>
+
+        <img class="boy" id="boy" src="Run__000.png" />
+
+        <div>
+            <div class="c1" id="c1">
+                <button onclick="c1btn();">Main Menu</button>
+            </div>
+
+            <div class="c2" id="c2">
+                <button onclick="c2btn();">Home</button>
+            </div>
+        </div>
+        
+        <img class="monster" id="monster" src="monster.png" />
+
+
+        <div class="endScreen" id="endScreen">
+            <img class="lostImage" id="lostImage" src="lost.png" />
+        </div>
+
+        <div class="wonScreen" id="wonScreen">
+            <img class="winImage" id="winImage" src="win.png" />
+        </div>
+
+        <div class="wonScore" id="wonScore">
+            <div id="winScore">0</div>
+            <div class="c3" id="c3">
+                <button onclick="c3btn();">Next Level</button>
+            </div>
+        </div>
+
+        <div class="lostScore" id="lostScore">
+            <div id="endScore">0</div>
+            <div class="c4" id="c4">
+                <button onclick="reload();">Try Again</button>
+            </div>
+        </div>
+
+        <img class="logo1" id="logo1" src="1logo.png" />
+
+    </div>
+
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            let username = localStorage.getItem("username");
+            if (username) {
+                document.getElementById("name").innerText = username;
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+    <script src="style.js"></script>
+</body>
+
+ 
+<!-- 
+  
+  Copyright (c) 2023 GH Game Studio
+Permission is hereby granted, free of charge, to any person obtaining a copy of this game and associated documentation files (the "Shinobi Rush"), to deal in the game without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the game, and to permit persons to whom the game
+is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the game.
+THE GAME IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE GAME OR THE USE OR OTHER DEALINGS IN THE GAME.  -->
+
+</html>
